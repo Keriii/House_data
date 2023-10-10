@@ -6,5 +6,8 @@ Overview
 
 Instructions
 
+Installation
+
+Configuration
 
 ![Alt text](image.png) 
