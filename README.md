@@ -2,4 +2,9 @@
 
 ## In this project, I plan to use datas from homes, with over 75 descriptions inorder to predict the price of other homes.
 
-![Alt text](image.png)
+Overview
+
+Instructions
+
+
+![Alt text](image.png) 
