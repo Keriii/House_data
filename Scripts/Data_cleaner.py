@@ -16,7 +16,7 @@ class data_cleaner:
         """
         calculate the percentage of missing values from dataframe
         """
-        totalCells = np.product(data.shape)
+        totalCells = np.prod(data.shape)
         missingCount = data.isnull().sum()
         totalMising = missingCount.sum()
 
