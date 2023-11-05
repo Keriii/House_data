@@ -115,3 +115,14 @@ class data_cleaner:
         """
         norm = Normalizer()
         return pd.DataFrame(norm.fit_transform(data[self.get_numerical_columns(data)]), columns=self.get_numerical_columns(data))
+    
+    def Nan_to_zero(self, data: pd.DataFrame) -> pd.DataFrame:
+        """
+        substitute NaN values with 0 for a given coolumn
+        """
+        cols = ['Alley', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinType2', 'FireplaceQu', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageQual', 'GarageCond', 'PoolQC', 'Fence', 'MiscFeature', 'MasVnrType']
+        for col in cols:
+            data['col'] = data['col'].fillna(0)
+            
+            return data
+
