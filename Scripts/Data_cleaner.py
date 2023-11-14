@@ -77,38 +77,6 @@ class data_cleaner:
             print("Method unknown")
             return data
 
-    def fill_missing_values_numeric(self, data: pd.DataFrame, method: str,columns: list =None) -> pd.DataFrame:
-        """
-        fill missing values with specified method
-        """
-        if(columns==None):
-            numeric_columns = self.get_numerical_columns(data)
-        else:
-            numeric_columns=columns
-
-        if method == "mean":
-            for col in numeric_columns:
-                data[col].fillna(data[col].mean(), inplace=True)
-
-        elif method == "median":
-            for col in numeric_columns:
-                data[col].fillna(data[col].median(), inplace=True)
-        else:
-            print("Method unknown")
-        
-        return data
-
-    def remove_nan_categorical(self, data: pd.DataFrame) -> pd.DataFrame:
-        """
-        remove columns with nan values for categorical columns
-        """
-
-        categorical_columns = self.get_categorical_columns(data)
-        for col in categorical_columns:
-            data = data[data[col] != 'nan']
-
-        return data
-
     def normalizer(self, data: pd.DataFrame) -> pd.DataFrame:
         """
         normalize numerical columns
