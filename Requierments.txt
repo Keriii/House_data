@@ -1,0 +1,6 @@
+scikit-learn==1.1.2
+mysql-connector-python==8.0.30
+matplotlib==3.5.2
+pandas
+seaborn
+numpy
